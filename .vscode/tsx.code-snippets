@@ -1,0 +1,46 @@
+{
+  "React Component with Arrow Function and Interface": {
+    "prefix": "rcai",
+    "body": [
+      "import type { ComponentPropsWithoutRef } from 'react';",
+      "",
+      "interface I${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Props extends ComponentPropsWithoutRef<'$1'> {}",
+      "",
+      "export const ${TM_FILENAME_BASE/(.*)/${1:/capitalize}/} = ({}: I${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}Props) => {",
+      "  return <$1>${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}</$1>;",
+      "};"
+    ],
+    "description": "React Component with Arrow Function and Interface"
+  },
+  "Next.js App Router Page": {
+    "prefix": "nap",
+    "body": [
+      "interface I${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}PageProps {}",
+      "",
+      "const ${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}Page = ({}: I${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}PageProps) => {",
+      "  return <>${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}</>;",
+      "};",
+      "",
+      "export default ${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}Page;"
+    ],
+    "description": "Next.js App Router Page"
+  },
+  "Next.js App Router Layout": {
+    "prefix": "nal",
+    "body": [
+      "interface I${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}LayoutProps extends Readonly<IBaseLayoutProps> {}",
+      "",
+      "const ${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}Layout = ({ children }: I${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}LayoutProps) => {",
+      "  return <main>{children}</main>;",
+      "};",
+      "",
+      "export default ${TM_DIRECTORY/^.+[\\/\\\\]+([^\\/\\\\]+)$/${1:/capitalize}/}Layout;"
+    ],
+    "description": "Next.js App Router Layout"
+  },
+  "Log With CheckBox": {
+    "prefix": "vlg",
+    "body": ["console.log('✅ [${TM_FILENAME}] ${CLIPBOARD}', ${CLIPBOARD})"],
+    "description": "Log With CheckBox"
+  }
+}

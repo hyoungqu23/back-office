@@ -1,0 +1,12 @@
+{
+  "Public API export": {
+    "prefix": "epa",
+    "body": ["export * from '.$1';"],
+    "description": "Export All"
+  },
+  "Log With CheckBox": {
+    "prefix": "vlg",
+    "body": ["console.log('✅ [${TM_FILENAME}] ${CLIPBOARD}', ${CLIPBOARD})"],
+    "description": "Log With CheckBox"
+  }
+}
